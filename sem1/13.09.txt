@@ -1,0 +1,26 @@
+//Aleksandrova Uliana, RUDN, NKAbd-01-22, 12.09.22, 11:45
+
+#include <stdio.h>
+#include <iostream>
+#define _USE_MATH_DEFINES
+#include <math.h>
+
+//Сырье для изготовления искусственных нитей поступает в бочках радиуса R и высотой H. Определить объем N бочек.
+
+using namespace std;
+
+int main()
+{
+    float R, H, N;
+
+    cout << "Программа по вычислению объема некого числа бочек\n";
+    cout << "Введите радиус бочки: " << endl;
+    cin >> R;
+    cout << "Введите высоту бочки: " << endl;
+    cin >> H;
+    cout << "Введите количество бочек: " << endl;
+    cin >> N;
+    cout << "Объем " << N << " бочек составляет: " << R*R*H*N*M_PI << endl;
+
+    return 0;
+}

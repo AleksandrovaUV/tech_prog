@@ -1,0 +1,38 @@
+// В заданной матрице A(N,M) поменять местами строки 
+// с номерами P и Q (1 <= P <= N, 1 <= Q <= N ).
+
+//Aleksandrova Uliana, NKAbd-01-22, 16.11
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    setlocale(LC_ALL, "Russian");
+    int n, m, a[10][10], p, q;
+    cout << "Введите N и M: ";
+    cin >> n >> m;
+    cout << "Введите элементы матрицы: ";
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < m; j++)
+            cin >> a[i][j];
+    cout << "Введена матрица: \n";
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++)
+            cout << a[i][j] << "\t";
+        cout << endl;
+    }
+    cout << "Введите строки, которые нужно поменять: ";
+    cin >> p >> q;
+    for (int j = 0; j < n; j++) {
+        int tmp = a[p][j];
+        a[p][j] = a[q][j];
+        a[q][j] = tmp;
+    }
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++)
+            cout << a[i][j] << "\t";
+        cout << endl;
+    }
+    return 0;
+}
